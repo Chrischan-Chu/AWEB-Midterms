@@ -1,0 +1,40 @@
+<div> 
+  Today's date :- {{ presentDate }} 
+</div>
+
+<div> 
+  Today's date :- {{ presentDate | date }}
+</div>
+
+<div>
+  This is a short date :- {{ presentDate | date: 'shortDate' }} <br/>
+  This line shows the full date :- {{ presentDate | date: 'fullDate' }} <br/>
+  This will show a formatted date :- {{ presentDate | date: 'M/dd/yyyy' }} <br/>
+  This indicates the hours and minutes :- {{ presentDate | date: 'h:mm' }}
+</div>
+
+<div>
+  Date with uppercase :- {{ presentDate | date: 'fullDate' | uppercase }} <br/>
+  Date with lowercase :- {{ presentDate | date: 'medium' | lowercase }} <br/>
+</div>
+
+<h2>Hello There!</h2>
+<p>Object with JsonPipe: {{ testObject | json }}</p>
+
+<h3>Currency Pipe</h3>
+<p>Formatted price (default currency): {{ price | currency }}</p>
+<p>Formatted price (PHP): {{ price | currency: 'PHP' }}</p>
+
+<h3>Slice Pipe</h3>
+<p>Start index: {{ Fruits | slice: 2 }}</p>
+<p>Start and end index: {{ Fruits | slice: 1:4 }}</p>
+<p>Negative index: {{ Fruits | slice: -2 }}</p>
+<p>Negative start and end index: {{ Fruits | slice: -4:-2 }}</p>
+
+<h3>Decimal Pipe</h3>
+<p>Number 1: {{ decimalNum1 | number }}</p>
+<p>Number 2: {{ decimalNum2 | number }}</p>
+<p>Apply formatting: {{ decimalNum1 | number: '3.1' }}</p>
+<p>Apply formatting: {{ decimalNum1 | number: '2.1-4' }}</p>
+
+<router-outlet></router-outlet>

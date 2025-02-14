@@ -1,0 +1,19 @@
+<h1>Christian Ralph Tan | WD - 302 | {{ title }}</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of httpusers">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.username }}</td>
+    </tr>
+  </tbody>
+</table>
